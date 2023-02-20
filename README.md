@@ -16,5 +16,5 @@ This project demonstrates web document scanner library with [Dynamic Web TWAIN](
 
 ```
 
-![](https://www.dynamsoft.com/codepool/img/2022/09/angular-document-scanner-sdk.png)
+![image](https://user-images.githubusercontent.com/78069915/220077165-ff7385b5-5c21-4e1f-afd4-aa81dd5a34a6.png)
 
