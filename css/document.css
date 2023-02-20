@@ -1,0 +1,377 @@
+/*=============== ScanWrapper&DWTWrapper ===============*/
+input {
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+}
+
+.btnOrg {
+    width: 200px;
+    font-family: 'Oswald-Regular';
+    padding: 0 15px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    background: #FE8E14;
+    border: none;
+    cursor: pointer;
+}
+
+div.divinput {
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    color: black;
+    line-height: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+    background: #F5F5F5;
+}
+
+.divType, #divSave .toggle, #divSaveImage .toggle, #divSavePdf .toggle, #divUpload .toggle ,.dcs-upload-tab{
+    display: flex;
+    height: 48px;
+    font-family: Oswald-Regular, Arial, sans-serif, Verdana, Helvetica;
+    font-size: 18px;
+    background: #323234;
+    color: white;
+    cursor: default;
+    align-items: center;
+    justify-content: center;
+}
+
+.divType, #divSave .toggle, #divSaveImage .toggle, #divSavePdf .toggle, #divUpload .toggle ,.dcs-upload-tab img{
+    cursor: pointer;
+}
+
+#divUpload .content-ul, #divSave .content-ul, #divSaveImage .content-ul, #divSavePdf .content-ul {
+    max-height: 88%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+}
+
+#divUpload .content-ul li, #divSave .content-ul li, #divSaveImage .content-ul li, #divSavePdf .content-ul li {
+    border-top: solid 2px #F0EFF4;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#divUpload .content-ul li:last-child, #divSave .content-ul li:last-child, #divSaveImage .content-ul li:last-child, #divSavePdf .content-ul li:last-child {
+    border-top: none;
+    padding:0px 5% 10px 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#divUpload select, #divSave select, #divUpload input[type='text'], #divSave input[type='text'], #divSavePdf input[type='text'], #divSaveImage input[type='text'] {
+    font-family: OpenSans-Regular;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 15px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    height: 34px;
+    border: solid 1px #727274;
+    outline: none;
+}
+
+#divUpload input[type='radio'], #divUpload input[type='checkbox'], #divSave input[type='checkbox'], #divSave input[type='radio'], #divSaveImage input[type='checkbox'], #divSaveImage input[type='radio'], #divSavePdf input[type='checkbox'], #divSavePdf input[type='radio']{
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 20px;
+}
+
+/*=============== Upload ===============*/
+.uploadInfo {
+    font-family: OpenSans-Regular;
+    display: none;
+    line-height: 18px;
+    box-sizing: border-box;
+    padding:5px 5px;
+    margin: 10px 0px;
+    text-align: left;
+    width: 90%;
+    background: white;
+    position: absolute;
+    top: 22px;
+    font-size: 12px;
+    border: 2px solid #5e5e5e;
+}
+
+#divUpload .section {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10px;
+}
+
+#divUpload li label {
+    font-family: 'OpenSans-Regular';
+    display: flex;
+    margin: 0 25px 0 0;
+    font-size: 14px;
+    align-items: center;
+}
+
+#divUpload li img {
+    left: 15px;
+    position: absolute;
+}
+
+#divUpload li label:last-child {
+    margin-right: 0;
+}
+
+#divUpload li {
+    padding: 0 15px 0 15px;
+}
+
+#divUpload li:nth-child(2) {
+    padding-top: 0;
+    padding-bottom: 0;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+}
+
+#divUpload li:nth-child(4) {
+    display: flex;
+    align-items: center;
+}
+
+#divUpload li:nth-child(5) {
+    display: flex;
+    align-items: center;
+}
+
+#divUpload #btnSave, #divUpload #btnUpload {
+    padding: 0;
+    width: 115px;
+    height: 30px;
+    margin-right: 15px;
+    font-family: OpenSans-Semibold, Arial, sans-serif, Verdana, Helvetica;
+    cursor: pointer;
+}
+
+#divUpload #btnUpload {
+    width: 138px;
+    margin-right: 0;
+}
+
+#resultWrap {
+    font-size: 8px;
+    height: 200px;
+    min-height: 150px;
+    max-height: 255px;
+    overflow-y: scroll;
+}
+
+    #resultWrap table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        padding-bottom: 25px;
+        width: 100%;
+        display: table
+    }
+
+    #resultWrap table tr {
+        margin-top: 5px;
+    }
+
+    #resultWrap table, th, td {
+        border: none
+    }
+
+    #resultWrap table td span {
+        font-size:14px
+    }
+
+    #resultWrap a {
+        margin-right: 2px;
+        font-family: 'Oswald-Regular';
+        color: #FE8E14;
+        text-decoration: none;
+        background-color: transparent;
+        font-size: 14px;
+    }
+
+        #resultWrap a:hover {
+            color: #61c2ec;
+        }
+
+        #resultWrap a.bluelink {
+            color: #50a8e1;
+        }
+
+            #resultWrap a.bluelink:hover {
+                color: #61c2ec;
+            }
+
+        #resultWrap a.graylink {
+            color: #999;
+        }
+
+            #resultWrap a.graylink:hover {
+                color: #61c2ec;
+            }
+
+    #resultWrap tr td:nth-child(2) span {
+        display: inline-block;
+        width: 4px;
+        height: 17px;
+        color: #ccc;
+        overflow: hidden;
+    }
+
+/*#divSaveImage/PDF*/
+
+.dcs-inputLi label,#divSaveImage li label, #divSavePdf li label {
+    font-family: 'OpenSans-Regular';
+    flex:1;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+}
+
+#divSave li img, #divSaveImage li img, #divSavePdf li img{
+    left: 15px;
+    position: absolute;
+}
+
+.dcs-inputLi{
+    display: flex;
+}
+
+select#pageSize, select#fileSize{
+    font-family: 'OpenSans-Regular';
+    font-size: 14px;
+    background-color: white;
+    width: 75%;
+    height: 34px;
+    border: solid 1px #727274;
+    padding-left: 10px
+}
+
+#liPageSize, #liFileSize {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*======================== Upload_list ==========================*/
+#div-uploadedFile #wrapper {
+    border: 2px solid #ddd;
+    border-radius: 3px;
+}
+
+#div-uploadedFile .container {
+    width: 870px;
+}
+
+#DWTUploadContainer #resultWrap #div-uploadedFile table {
+    width: 100%;
+}
+
+#resultWrap #div-uploadedFile th {
+    width: 50%;
+    text-align: center;
+    font-size: 12px;
+    color: #444;
+    background: #e7f2fc;
+    height: 25px;
+    font-weight: bold;
+}
+
+#resultWrap #div-uploadedFile td {
+    font-family: OpenSans-Regular;
+    text-align: center; 
+    font-size: 12px; 
+}
+
+#DWTdivUpload #div-uploadedFile td {
+    text-align: center;
+    height: 35px;
+    font-size: 12px;
+    border-top: solid 1px #ccc;
+}
+
+#resultWrap #div-uploadedFile tr:last-child td { 
+    text-align: center; 
+}
+
+#resultWrap #div-uploadedFile tr td:nth-child(2) span {
+    display: inline-block;
+    width: 18px;
+    height: 17px;
+    color: #ccc;
+    overflow: hidden;
+}
+
+.dynamsoft-dwt-header {
+    background: #323234 0% 0% no-repeat padding-box;
+    height: 15px;
+    margin-bottom: 30px;
+}
+
+.ds-dwt-ui-showdlg .button-yes {
+    width: 100px;
+    margin-bottom: 20px;
+    height: 42px;
+    font: normal normal normal 16px/30px Oswald;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background: #FE8E14 0% 0% no-repeat padding-box;
+    border: none;
+    cursor: pointer;
+    margin-right: 23px;
+}
+
+.ds-dwt-ui-showdlg .button-yes:hover {
+    background: #ffae38;
+}
+
+.ds-dwt-ui-showdlg .button-no {
+    border: 1px solid #FE8E14;
+    font: normal normal normal 16px/30px Oswald;
+    letter-spacing: 0px;
+    color: #FE8E14;
+    text-transform: uppercase;
+    background: #FFFFFF;
+    width: 100px;
+    height: 42px;
+}
+
+.dynamsoft-dwt-dlg-title {
+    font-size: 16px;
+}
+
+.header-Buttons-Config {
+    color: white;
+}
+
+@media screen and (max-device-width:450px) {
+    #DWTWrapper {
+        flex: auto;
+    }
+}
+
+#connecting {
+    color: #999;
+    animation: fade 1200ms infinite;
+    -webkit-animation: fade 1200ms infinite;
+}
+
+#connected {
+    color: #46BAAF;
+}

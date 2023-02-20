@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('../icon/iconfont.ttf?t=1671429796986') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-refresh:before {
+  content: "\e6c2";
+}
+
+.icon-moreSetting:before {
+  content: "\e676";
+}
+
+.icon-icon_about:before {
+  content: "\e601";
+}
+
+.icon-icon_arrow:before {
+  content: "\e602";
+}
+
+.icon-icon_arrow_white:before {
+  content: "\e603";
+}
+
+.icon-icon_camera:before {
+  content: "\e604";
+}
+
+.icon-icon_contact:before {
+  content: "\e605";
+}
+
+.icon-icon_Delete:before {
+  content: "\e606";
+}
+
+.icon-icon_documents:before {
+  content: "\e607";
+}
+
+.icon-icon_info:before {
+  content: "\e608";
+}
+
+.icon-icon_camera1:before {
+  content: "\e609";
+}
+
+.icon-icon_scanner:before {
+  content: "\e60a";
+}
+
+.icon-icon_addDoc:before {
+  content: "\e60b";
+}
+

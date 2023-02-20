@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="This is a web application for scanning documents in browsers on smartphones." />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/document.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="icon" type="./image/png" sizes="32x32" href="./icon/dwt_logo_64x64.ico">
+    <title>Document Scanner from Camera | Mobile Web Capture</title>
+    <meta name="keyword" content="Online Document Scanning Solution, Browser-Based Document SDK" />
+    <script>
+        vSessionID = '<%=SessionID%>';
+    </script>
+ </head>
+ <body>
+ 	<!-- Main page -->
+    <div id='dcsMainPage' class = 'dcs-main'>
+        <div class="dcs-main-header">My Documents</div>
+        <div class='dcs-main-content' onclick="closeModeSelectionBox()">
+            <ul id='dcsMainUl' class='dcs-main-content-ul'></ul>
+        </div>
+		<!-- Footer tab -->
+        <div class='dcs-main-footer'>
+			<div style="width:70px; display: flex; flex-direction: column; align-items: center; font-size: 12px;">
+                <i class="iconfont icon-icon_about" style="margin-top:4px; color:#666666; font-size:19px"></i>
+				<p class="dcs-basic-font" style='color:#666666; font-size:13px;'>Any Text</p>
+			</div>
+            <div onclick='selectScanMode()' class="dcs-main-captureBtn">
+                <div id="dcsSelectionBox" class="dcs-main-scanModeSelection" style="display:none">
+                    <div class="dcs-main-selectionBox">
+                        <div id="dcsSelectionScan" class="dcs-main-selectionBox-iconBox">
+                            <img  src="./icon/icon_scanner.svg"></img>
+                            <span>Scanner</span>
+                        </div>
+                        <div id="dcsSelectionCamera" class="dcs-main-selectionBox-iconBox">
+                            <img style="margin-top:6px" src="./icon/icon_camera.svg"></img>
+                            <span >Camera</span>
+                        </div>
+                    </div>
+                    <div class="triangle"></div>
+                </div>
+                <img src="./icon/icon_addDoc.svg"></img>
+			</div>
+			<div style="width:70px; display: flex; flex-direction: column; align-items: center; font-size: 12px;">
+                <i class="iconfont icon-icon_contact" style="margin-top:4px; color:#666666; font-size:22px"></i>
+				<p class="dcs-basic-font" style='color:#666666; font-size:13px;'>Any Text</p>
+			</div>
+        </div>
+    </div>
+	<div id="dcsUploadViewPage" style="display:none;"></div>
+
+	<script type="text/javascript" src="./Resources/dynamsoft.webtwain.initiate.js"></script>
+    <script type="text/javascript" src="./Resources/dynamsoft.webtwain.config.js"></script>
+    <script src="./Resources/addon/dynamsoft.webtwain.addon.pdf.js"></script>
+    <script src="./Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
+    <script src="./Script/package/localforage.js"></script>
+	<script src="./Script/config.js"></script>
+    <script src="./Script/popup.js"></script>
+    <script src="./Script/utils.js"></script>
+    <script src="./Script/saveAndUpload.js"></script>
+    <script src="./Script/androidScan.js"></script>
+	<script src="./Script/main.js"></script>
+    <script>
+
+        if ("ActiveXObject" in window) {
+            document.querySelector('.dcs-main-footer').style.justifyContent = 'space-around';
+            ieInfo();
+        }
+
+        //utils.js
+        resizeBody();
+        checkHttps();
+        //main.js
+        initDwt();
+        initFileData();
+
+    </script>
+</body>
+</html>
