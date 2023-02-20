@@ -13,6 +13,7 @@ This project demonstrates web document scanner library with [Dynamic Web TWAIN](
 3. Open web browser like chrome, firefox, safari and hit the url.
 4. Click on the center button and give permission to the camera.
 5. Scan the document without having any installed application in your mobile.
+6. Or just download the source code from official page - https://www.dynamsoft.com/web-twain/resources/code-gallery/
 
 ```
 
